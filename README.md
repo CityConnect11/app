@@ -6,9 +6,9 @@ Mit CityConnect triffst du deine Freunde trotz Ausgangssperre auf eine virtuelle
  * [Git installieren](https://desktop.github.com) und damit dieses Repository herunterladen
  * [Node und NPM installieren](https://goneuland.de/npm-und-node-js-unter-windows-installieren/)
  * Nacheinander auf der Konsole im Projekt ausführen
- ** `npm install`
- ** `npm run build`
- ** `npm run start`
+  * `npm install`
+  * `npm run build`
+  * `npm run start`
  * Nun kann man die Anwendung auf localhost:3000 im Browser öffnen
 
 ## Projekt entwickeln
