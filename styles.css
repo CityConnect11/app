@@ -63,8 +63,9 @@
   100%{background-position:0% 50%}
 }
 
-#mapid {
-  height: 180px;
+.leaflet-container {
+  height: 400px;
+  width: 100%;
 }
 
 .title {
