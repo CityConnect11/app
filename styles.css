@@ -63,50 +63,8 @@
   100%{background-position:0% 50%}
 }
 
-.object_display_item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 18px 18px 24px;
-  text-align: center;
-  vertical-align: center;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #434343;
-}
-
-.object_display_item h4 {
-  margin: 0;
-  color: #067df7;
-  font-size: 72px;
-  text-overflow: ellipsis;
-  overflow: visible;
-  white-space: wrap;
-}
-
-.selection-correct {
-  background-color: green;
-}
-
-.selection-correct-text {
-  color: green;
-}
-
-.selection-wrong {
-  background-color: red;
-}
-
-.selection-wrong-text {
-  color: red;
-}
-
-.stats {
-  padding-bottom: 70px;
-}
-
-.object_display_description {
-  padding-bottom: 20px;
-  text-align: center;
+#mapid {
+  height: 180px;
 }
 
 .title {
@@ -117,10 +75,6 @@
   font-size: 48px;
 }
 
-.title, .description, .stats, .selection-correct-text, .selection-wrong-text {
+.title, .description {
   text-align: center;
-}
-
-.value {
-  font-weight: normal;
 }

@@ -3,7 +3,7 @@ import MenuEntry from './button'
 
 export default () => (
   <Container>
-    <MenuEntry link='/consumer/index' label='Nutzer' />
-    <MenuEntry link='/provider/index' label='Anbieter' />
+    <MenuEntry link='./consumer' label='Nutzer' />
+    <MenuEntry link='./provider' label='Anbieter' />
   </Container>
 )
