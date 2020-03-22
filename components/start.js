@@ -5,12 +5,12 @@ import Login from './auth/login'
 import Main from './start/main'
 
 export default () => (
-  <Container>
+  <Container className="frame">
     <Row>
-      <Col>
+      <Col xs={4}>
         <Login />
       </Col>
-      <Col>
+      <Col xs={8}>
         <Main />
       </Col>
     </Row>

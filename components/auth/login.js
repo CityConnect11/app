@@ -1,67 +1,107 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Header from "../header/header";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+import { Form, Field } from 'react-final-form'
+import { connect, useSelector } from 'react-redux'
+import { MODE_PRIVATE } from '../../lib/constants'
+import { useState } from 'react'
 
 const Login = () => {
+  const modeFromSelector = useSelector(state => state.mode ? state.mode : MODE_PRIVATE.key)
+  const [mode] = useState(modeFromSelector);
+  const isPrivate = mode === MODE_PRIVATE.key;
+  const loginTitle = isPrivate ? "Anmelden" : "Geschäftslogin";
+  const registerTitle = isPrivate ? "Als Gast beitreten" : "Geschäft registrieren";
   return (
-    <div>
-      <Header />
-      <Container className={"login-dialog"}>
+    <div className={"loginDialog"}>
+      <Container>
         <Row>
-          <Col>
-            <div className={"login-title"}>Anmelden</div>
+          <Col xs={3} />
+          <Col xs={8}>
+            <Container>
+              <Row>
+                <div className={"loginTitle"}>{loginTitle}</div>
+              </Row>
+              <Row>
+                <Form
+                  onSubmit={() => { }}
+                  render={({ handleSubmit, form, submitting, pristine, values }) => {
+                    const submitProps = {
+                      disabled: pristine,
+                      type: "button",
+                      role: "submit",
+                      value: "Anmelden"
+                    };
+                    return (
+                    <form onSubmit={handleSubmit}>
+                      <Container>
+                        <Row>
+                          <div className={"loginItem"}>
+
+                            <Container>
+                              <Row>
+                                <label className={"login-label"}>Benutzername</label>
+                              </Row>
+                              <Row>
+                                <Field
+                                  name="username"
+                                  component="input"
+                                  type="text"
+                                  holder="Benutzername"
+                                />
+                              </Row>
+                            </Container>
+                          </div>
+                        </Row>
+                        <Row>
+                          <div className={"loginItem"}>
+                            <Container>
+                              <Row>
+                                <label className={"login-label"}>Passwort</label>
+                              </Row>
+                              <Row>
+                                <Field
+                                  name="password"
+                                  component="input"
+                                  type="password"
+                                  holder="password"
+                                />
+                              </Row>
+                              <Row>
+                                <div className={"loginItem"}>
+                                  <input {...submitProps} />
+                                </div>  
+                              </Row>
+
+                              <Row>
+                                <div className={"loginItem"}>
+                                  <a href="">Passwort vergessen?</a>
+                                </div>  
+                              </Row>
+                            </Container>
+                          </div>
+                        </Row>
+                      </Container>
+                    </form>
+                  )}}>
+                </Form>
+              </Row>
+              {isPrivate && <Row><div className={"loginItem"}>
+                <a href="">Noch kein Konto? Hier registrieren.</a>
+              </div></Row>}
+              <Row>
+                <div className={"loginItem"}>
+                  <input type="button" value={registerTitle} />
+                </div>
+              </Row>
+            </Container>
           </Col>
-        </Row>
-        <Row>
-          <Col>
-            <label className={"login-label"}>Benutzername</label>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <input
-              name="username"
-              component="input"
-              type="text"
-              place
-              holder="Benutzername"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <label className={"login-label"}>Passwort</label>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <input
-              name="password"
-              component="input"
-              type="password"
-              place
-              holder="password"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <a href="">Passwort vergessen?</a>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <input value="Anmelden" type="button" />
-          </Col>
+          <Col xs={2} />
         </Row>
       </Container>
-      <div>
-        <a href="">Noch kein Konto? Hier registrieren.</a>
-      </div>
-      <input value="Als Gast beitreten" type="button" />
     </div>
   )
 }
 
-export default Login;
+export default connect()(Login);

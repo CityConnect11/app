@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .at-bottom {
   position: fixed;
   bottom: 0;
@@ -23,6 +28,17 @@
   border: 1px solid #9b9b9b;
 }
 
+.modeSlider {
+  padding: 8px 0px 10px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #434343;
+  border: 1px solid #9b9b9b;
+}
+
 .card:hover {
   border-color: #067df7;
 }
@@ -40,6 +56,7 @@
   color: #333;
 }
 
+
 .entryRow {
   max-width: 880px;
   margin: 20px auto 40px;
@@ -49,7 +66,7 @@
 }
 
 .frame {
-  width: 100%;
+  max-width: 100%;
   color: #333;
 }
 
@@ -77,9 +94,28 @@
   width: 100%;
   padding-top: 20px;
   line-height: 1.15;
-  font-size: 48px;
+  font-size: 64px;
 }
 
-.title, .description {
+.description {
+  font-size: 18px;
+}
+
+.loginDialog {
+  padding-top: 50px;
+  text-align: center;
+  width: 500px
+}
+
+.loginTitle {
+  font-size: 32px;
+}
+
+.loginItem {
+  padding-top: 15px;
+}
+
+.title, .description, .loginTitle {
+  font-family: 'IBM Plex Mono Regular';
   text-align: center;
 }
