@@ -6,16 +6,20 @@ import Sofa from "../icons/sofa"
 
 const Main = () => {
   return (
-    <div className={"main"}>
+    <div>
       <Container>
         <Row>
-          <Col xs={12}>
+          <Col xs={8} />
+          <Col xs={4}>
             <Sofa />
           </Col>
         </Row>
         <Row>
-          <Col xs={4} />
-          <Col xs={8}>
+          <div style={{height: "50px"}}></div>
+        </Row>
+        <Row>
+          <Col xs={8} />
+          <Col xs={4}>
             <Help />
           </Col>
         </Row>

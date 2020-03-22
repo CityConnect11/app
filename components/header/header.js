@@ -21,8 +21,15 @@ export default () => (
             </Row>
           </Container>
         </Col>
-        <Col xs={8}>
-          <Navbar />
+        <Col xs={8} className={"main"}>
+          <Container>
+            <Row>
+              <Col xs={"6"}/>
+              <Col xs={"6"}>
+                <Navbar />
+              </Col>
+            </Row>
+          </Container>
         </Col>
       </Row>
     </Container>

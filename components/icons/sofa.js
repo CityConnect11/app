@@ -1,7 +1,7 @@
 import sofa from '../../public/static/sofa.svg';
 
 const SofaIcon = () => (
-  <i
+  <i style={{backgroundSize: "20px 30px"}}
     dangerouslySetInnerHTML={{
       __html: sofa,
     }}

@@ -10,7 +10,7 @@ export default () => (
       <Col xs={4}>
         <Login />
       </Col>
-      <Col xs={8}>
+      <Col xs={8} className={"main"}>
         <Main />
       </Col>
     </Row>

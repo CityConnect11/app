@@ -8,7 +8,7 @@ import ModeSelection from './mode'
 
 const Navbar = () => {
   return (
-    <div className={"main"}>
+    <div>
       <Container>
         <Row>
           <Col xs={3}>
