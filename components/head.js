@@ -25,6 +25,14 @@ const Head = props => (
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossOrigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossOrigin="anonymous"
+    />
+    <link href="https://fonts.google.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.google.com/css?family=Work+Sans&display=swap" rel="stylesheet" />
     <meta property="og:url" content={props.url || defaultOGURL} />
     <meta property="og:title" content={props.title || ''} />
     <meta
