@@ -3,5 +3,8 @@
     [
       "next/babel"
     ]
+  ],
+  "plugins": [
+    "inline-svg"
   ]
 }
