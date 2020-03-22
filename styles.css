@@ -104,9 +104,10 @@ html, body {
 }
 
 .loginDialog {
-  padding-top: 50px;
+  margin-top: 40px;
+  padding: 10px;
   text-align: center;
-  width: 500px
+  border: 3px solid #9b9b9b;
 }
 
 .loginTitle {
@@ -120,4 +121,17 @@ html, body {
 .title, .description, .loginTitle {
   font-family: 'IBM Plex Mono Regular';
   text-align: center;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+}
+
+.rc-slider-rail {
+  background-color: #000000;
 }

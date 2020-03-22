@@ -10,7 +10,9 @@ export default ({modeValue, setModeValue}) => (
         <Col xs={4}>
           <Container>
             <Row>
-              <div className="title">CityConnect</div>
+              <a href={"./index"} className="title" style={{ color: "#000000"}}>
+                CityConnect
+              </a>
             </Row>
             <Row>
               <Col xs={12}>

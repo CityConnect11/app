@@ -1,17 +1,20 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Link from 'next/link'
 import Button from '@material-ui/core/Button'
-import React, { useState, } from 'react';
+
+const ButtonLink = ({ className, href, hrefAs, children }) => (
+  <Link href={href} as={hrefAs}>
+    <a className={className}>
+      {children}
+    </a>
+  </Link>
+);
 
 import { Form, Field } from 'react-final-form'
-import { MODE_PRIVATE } from '../../lib/constants'
-import RegisterConsumer from './register-consumer';
-import RegisterProvider from './register-provider';
 
-const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
-  const loginTitle = isPrivate ? "Anmelden" : "Geschäftslogin";
-  const registerTitle = isPrivate ? "Als Gast beitreten" : "Geschäft registrieren";
+const RegisterProvider = () => {
   return (
     <div>
       <Container>
@@ -21,7 +24,7 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
             <div className={"loginDialog"}>
               <Container>
                 <Row>
-                  <div className={"loginTitle"}>{loginTitle}</div>
+                  <div className={"loginTitle"}>{"Geschäft registrieren"}</div>
                 </Row>
                 <Row>
                   <Form
@@ -32,11 +35,66 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
                         type: "button",
                         role: "submit",
                         value: "Anmelden",
-                        style: { backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }
+                        style: { backgroundColor: "#ecb3b5" }
                       };
                       return (
                         <form onSubmit={handleSubmit}>
                           <Container>
+                            <Row>
+                              <div className={"loginItem"}>
+
+                                <Container>
+                                  <Row>
+                                    <label className={"login-label"}>Name des Geschäfts</label>
+                                  </Row>
+                                  <Row>
+                                    <Field
+                                      name="shopname"
+                                      component="input"
+                                      type="text"
+                                      holder="Name des Geschäfts"
+                                    />
+                                  </Row>
+                                </Container>
+                              </div>
+                            </Row>
+                            <Row>
+                              <div className={"loginItem"}>
+
+                                <Container>
+                                  <Row>
+                                    <label className={"login-label"}>Branche</label>
+                                  </Row>
+                                  <Row>
+                                    <Field
+                                      name="domain"
+                                      component="input"
+                                      type="text"
+                                      holder="Branche"
+                                    />
+                                  </Row>
+                                </Container>
+                              </div>
+                            </Row>
+                            <Row>
+                              <div className={"loginItem"}>
+
+                                <Container>
+                                  <Row>
+                                    <label className={"login-label"}>E-Mail-Adresse</label>
+                                  </Row>
+                                  <Row>
+                                    <Field
+                                      name="email"
+                                      component="input"
+                                      type="text"
+                                      holder="E-Mail Adresse"
+                                    />
+                                  </Row>
+                                </Container>
+                              </div>
+                            </Row>
+
                             <Row>
                               <div className={"loginItem"}>
 
@@ -73,15 +131,9 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
                                     <div className={"loginItem"}>
                                       <Button
                                         style={submitProps.style}
-                                        href={'/consumer'}>
+                                        href={'/provider'}>
                                         {submitProps.value}
                                       </Button>
-                                    </div>
-                                  </Row>
-
-                                  <Row>
-                                    <div className={"loginItem"}>
-                                      <a href={"#"}>Passwort vergessen?</a>
                                     </div>
                                   </Row>
                                 </Container>
@@ -93,18 +145,6 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
                     }}>
                   </Form>
                 </Row>
-                {isPrivate && <Row><div className={"loginItem"}>
-                  <a href={"#"} onClick={() => setRegistration(true)}>Noch kein Konto? Hier registrieren.</a>
-                </div></Row>}
-                <Row>
-                  <div className={"loginItem"}>
-                    <Button
-                      style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}
-                      href={isPrivate ? '/consumer' : "#"} onClick={() => setRegistration(true)}>
-                      {registerTitle}
-                    </Button>
-                  </div>
-                </Row>
               </Container>
             </div>
           </Col>
@@ -112,29 +152,7 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
         </Row>
       </Container>
     </div>
-  );
+  )
 }
 
-
-const Login = ({ modeValue }) => {
-  const isPrivate = modeValue === MODE_PRIVATE.key;
-  const [inRegistration, setRegistration] = useState(false);
-  if (inRegistration) {
-    if (isPrivate) {
-      return (
-        <RegisterConsumer />
-      );
-    } else {
-      return (
-        <RegisterProvider />
-      );
-    }
-  } else {
-    return (
-      <LoginDialog isPrivate={isPrivate} modeValue={modeValue}
-        setRegistration={setRegistration} />
-    )
-  }
-}
-
-export default Login;
+export default RegisterProvider;

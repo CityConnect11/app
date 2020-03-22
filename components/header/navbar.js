@@ -18,11 +18,11 @@ const Navbar = ({modeValue, setModeValue}) => {
             <Button label={"Hilfe"} link={"./help"} />
           </Col>
           <Col xs={6}>
-            <Entry>
+            { modeValue && <Entry>
               <div width={"1000%"}>
                 <ModeSelection modeValue={modeValue} setModeValue={setModeValue} />
               </div>
-            </Entry>
+            </Entry> }
           </Col>
         </Row>
       </Container>

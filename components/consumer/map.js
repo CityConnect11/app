@@ -1,31 +1,27 @@
-const { Map: LeafletMap, TileLayer, Marker, Popup } = require('react-leaflet');
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import MapObject from '../map/map'
+import FacetSearch from './facet-search'
+import Header from '../header/header'
 
-class ConsumerMap extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      lat: 51.505,
-      lng: -0.09,
-      zoom: 13
-    }
-  }
-
-  render() {
-    const position = [this.state.lat, this.state.lng];
-    return (
-      <LeafletMap center={position} zoom={this.state.zoom}>
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
-        />
-        <Marker position={position}>
-          <Popup>
-            A pretty CSS3 popup. <br/> Easily customizable.
-          </Popup>
-        </Marker>
-      </LeafletMap>
-    );
-  }
+const ConsumerMap = () => {
+  return (
+    <div>
+      <Header />
+      <Container className="frame">
+        <Row>
+          <Col xs={4}>
+            <FacetSearch />
+          </Col>
+          <Col xs={8} className={"main"} 
+            style={{ backgroundColor: "#b7d0cd" }}>
+            <MapObject />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  )
 }
 
 export default ConsumerMap;

@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Button from '@material-ui/core/Button'
 import { Form } from 'react-final-form'
 
-const Help = ({ modeValue }) => {
+const About = ({ modeValue }) => {
   return (
     <div>
       <Container>
@@ -14,7 +14,7 @@ const Help = ({ modeValue }) => {
             <div className={"loginDialog"}>
               <Container>
                 <Row>
-                  <div className={"loginTitle"}>{"Hilfe"}</div>
+                  <div className={"loginTitle"}>{"Über"}</div>
                 </Row>
                 <Row>
                   <Form
@@ -32,26 +32,14 @@ const Help = ({ modeValue }) => {
                           <Container>
                             <Row>
                               <div className={"loginItem"}>
-                                <span>
-                                  Auf dieser Seite werden in einfachen Erklärvideos 
-                                  und kurzen Texten die Funktionen, die Anmeldung
-                                  und alles Wichtige gezeigt.
-                                </span>
-                                <span>
-                                  Suchen Sie in der Liste auf der rechten Seite
-                                  ein bestimmtes Video aus oder drücken Sie auf
-                                  "Anleitung starten", um alle Videos in der 
-                                  Reihenfolge anzusehen.
-                                </span>
-                              </div>
-                            </Row>
-                            <Row>
-                              <div className={"loginItem"}>
-                                <Button
-                                  style={submitProps.style}
-                                  href={"#"}>
-                                  {submitProps.value}
-                                </Button>
+                                <ul>
+                                  <li>
+                                    <a href={"https://devpost.com/software/1_025_e-kulturangebote_virtuelles_pizzaessen/joins/efgYrpDPat9KtdTGlhq6Ow"}>DevPost</a>
+                                  </li>
+                                  <li>
+                                    <a href={"https://www.youtube.com/watch?v=tL5KLSRlEfc"}>Video</a>
+                                  </li>
+                                </ul>
                               </div>
                             </Row>
                           </Container>
@@ -70,4 +58,4 @@ const Help = ({ modeValue }) => {
   );
 }
 
-export default Help;
+export default About;
