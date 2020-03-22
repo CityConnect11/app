@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\n\nvar ConsumerMap = function ConsumerMap() {\n  return __jsx(\"div\", {\n    id: \"map\"\n  });\n};\n\nexport default ConsumerMap;","map":null,"metadata":{},"sourceType":"module"}

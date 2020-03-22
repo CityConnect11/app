@@ -1,0 +1,50 @@
+{
+  "devFiles": [],
+  "lowPriorityFiles": [
+    "static/M-lzzSkpfLPllS_ihYEft/_buildManifest.js",
+    "static/M-lzzSkpfLPllS_ihYEft/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/chunks/a317b2f240dd8f19f459c03612beffefa216d057.d32b2e4875c0b1cb7cd9.js",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/chunks/a317b2f240dd8f19f459c03612beffefa216d057.d32b2e4875c0b1cb7cd9.js",
+      "static/css/styles.7ddedc18.chunk.css",
+      "static/chunks/styles.47671f08210211bd2aac.js",
+      "static/css/static/M-lzzSkpfLPllS_ihYEft/pages/_app.js.7ceb2ffc.chunk.css",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills-80b3b4bf437b609324bd.js"
+    ],
+    "/consumer": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/chunks/4378da104af7aee8011b33963d89214d258f8896.0f21f4f3f30509b776e5.js",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/chunks/a317b2f240dd8f19f459c03612beffefa216d057.d32b2e4875c0b1cb7cd9.js",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ],
+    "/provider": [
+      "static/runtime/webpack-9152c7f955248a71698a.js",
+      "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "static/chunks/4378da104af7aee8011b33963d89214d258f8896.0f21f4f3f30509b776e5.js",
+      "static/runtime/main-abbde463f16db3065bf8.js"
+    ]
+  }
+}

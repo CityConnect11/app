@@ -1,8 +1,12 @@
 const withPlugins = require('next-compose-plugins');
-const withTM = require('next-transpile-modules');
+const images = require('next-images');
+const sass = require('@zeit/next-sass');
+const withTM = require('next-transpile-modules')(['react-leaflet']);
 
-
-config = {
+// next.js configuration
+const nextConfig = {
+  useFileSystemPublicRoutes: false,
+  distDir: 'build',
   webpack: config => {
     // Fixes npm packages that depend on `fs` module
     config.node = {
@@ -11,6 +15,18 @@ config = {
     
     return config
   }
-}
-const withCSS = require('@zeit/next-css')
-module.exports = withCSS(config)
+};
+
+module.exports = withPlugins([
+
+  [sass, {
+    cssModules: true,
+    cssLoaderOptions: {
+      localIdentName: '[local]___[hash:base64:5]',
+    },
+  }],
+
+  images,
+
+  withTM
+], nextConfig);

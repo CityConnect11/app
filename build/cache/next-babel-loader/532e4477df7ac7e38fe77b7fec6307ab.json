@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport Frame from '../components/frame';\nimport StartMenu from '../components/start';\nexport default (() => {\n  return __jsx(\"div\", null, __jsx(Frame, null, __jsx(StartMenu, null)));\n});","map":null,"metadata":{},"sourceType":"module"}

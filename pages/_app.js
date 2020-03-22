@@ -1,19 +1,14 @@
 import App from 'next/app'
 import React from 'react'
-import withReduxStore from '../lib/store'
-import { Provider } from 'react-redux'
-import "../styles.css"
-import 'rc-slider/assets/index.css';
+import "../styles/styles.scss"
 
 class MyApp extends App {
   render () {
-    const { Component, pageProps, reduxStore } = this.props
+    const { Component, pageProps } = this.props
     return (
-      <Provider store={reduxStore}>
-        <Component {...pageProps} />
-      </Provider>
+      <Component {...pageProps} />
     )
   }
 }
 
-export default withReduxStore(MyApp)
+export default MyApp

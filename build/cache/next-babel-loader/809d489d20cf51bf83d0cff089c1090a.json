@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\n\nvar Help = function Help() {\n  return __jsx(\"div\", null, \"Brauchen Sie Hilfe im Umgang mit dem Programm? Klicken Sie \", __jsx(\"a\", {\n    href: \"\"\n  }, \"hier\"));\n};\n\nexport default Help;","map":null,"metadata":{},"sourceType":"module"}

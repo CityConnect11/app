@@ -10,13 +10,13 @@ const Navbar = () => {
     <div>
       <Container>
         <Row>
-          <Col>
+          <Col xs={3}>
             <Button label={"Über"} link={"./about"} />
           </Col>
-          <Col>
+          <Col xs={3}>
             <Button label={"Hilfe"} link={"./help"} />
           </Col>
-          <Col>
+          <Col xs={6}>
             <ModeSelection />
           </Col>
         </Row>
