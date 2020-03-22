@@ -29,7 +29,7 @@ const About = () => {
                                     <a href={"https://devpost.com/software/1_025_e-kulturangebote_virtuelles_pizzaessen/"}>DevPost</a>
                                   </li>
                                   <li>
-                                    <a href={"https://www.youtube.com/watch?v=tL5KLSRlEfc"}>Video</a>
+                                    <a href={"https://www.youtube.com/watch?v=Zy9uGH1eKzM"}>Video</a>
                                   </li>
                                   <li>
                                     <a href={"https://twitter.com/cityconnect11"}>Twitter</a>
