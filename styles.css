@@ -67,6 +67,10 @@
   height: 180px;
 }
 
+.main {
+  background-color: #b7d0cd;
+}
+
 .title {
   margin: 0;
   width: 100%;
