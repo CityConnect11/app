@@ -17,7 +17,7 @@ const Login = ({ modeValue }) => {
           <Col xs={8}>
             <Container>
               <Row>
-                <div className={"loginTitle"}>{loginTitle} - {modeValue}</div>
+                <div className={"loginTitle"}>{loginTitle}</div>
               </Row>
               <Row>
                 <Form
@@ -27,7 +27,8 @@ const Login = ({ modeValue }) => {
                       disabled: pristine,
                       type: "button",
                       role: "submit",
-                      value: "Anmelden"
+                      value: "Anmelden",
+                      style: { backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }
                     };
                     return (
                     <form onSubmit={handleSubmit}>
@@ -88,7 +89,8 @@ const Login = ({ modeValue }) => {
               </div></Row>}
               <Row>
                 <div className={"loginItem"}>
-                  <input type="button" value={registerTitle} />
+                  <input type="button" value={registerTitle} 
+                    style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}/>
                 </div>
               </Row>
             </Container>

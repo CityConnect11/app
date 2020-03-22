@@ -4,14 +4,14 @@ import Col from 'react-bootstrap/Col'
 import Help from "./help"
 import Sofa from "../icons/sofa"
 
-const Main = ({ modeValue, setModeValue }) => {
+const Main = ({ modeValue }) => {
   return (
     <div>
       <Container>
         <Row>
           <Col xs={8} />
           <Col xs={4}>
-            <Sofa />
+            { modeValue === 'business' && <Sofa /> }
           </Col>
         </Row>
         <Row>

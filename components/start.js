@@ -19,7 +19,8 @@ const Start = () => {
           <Col xs={4}>
             <Login modeValue={modeValue} />
           </Col>
-          <Col xs={8} className={"main"}>
+          <Col xs={8} className={"main"} 
+            style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}>
             <Main modeValue={modeValue} />
           </Col>
         </Row>
