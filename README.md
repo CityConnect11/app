@@ -1,6 +1,9 @@
 # City Connect
 Mit CityConnect triffst du deine Freunde trotz Ausgangssperre auf eine virtuelle Pizza #Bundesregierung #WirVsVirusHackathon #WirVsVirus
 
+## Projektdokumentation
+ * [Finales Konzept CityConnect Hackathon (pdf)](https://github.com/CityConnect11/app/releases/download/v1.0/Finales_Konzept_CityConnect_Hackathon.pdf)
+
 ## Projekt aufsetzen
 
  * [Git installieren](https://desktop.github.com) und damit dieses Repository herunterladen
