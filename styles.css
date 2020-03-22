@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'IBM Plex Mono Regular, sans-serif';
+  font-family: 'Work Sans';
 }
 
 .at-bottom {
@@ -88,7 +88,7 @@ html, body {
 }
 
 .main {
-  background-color: #ecb3b5;
+  background-color: #def4ef;
 }
 
 .title {
@@ -118,7 +118,7 @@ html, body {
   padding-top: 15px;
 }
 
-.title, .description, .loginTitle {
+.title, .loginTitle {
   font-family: 'IBM Plex Mono Regular';
   text-align: center;
 }

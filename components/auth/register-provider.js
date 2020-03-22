@@ -1,16 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Link from 'next/link'
 import Button from '@material-ui/core/Button'
-
-const ButtonLink = ({ className, href, hrefAs, children }) => (
-  <Link href={href} as={hrefAs}>
-    <a className={className}>
-      {children}
-    </a>
-  </Link>
-);
 
 import { Form, Field } from 'react-final-form'
 
@@ -35,7 +26,7 @@ const RegisterProvider = () => {
                         type: "button",
                         role: "submit",
                         value: "Anmelden",
-                        style: { backgroundColor: "#ecb3b5" }
+                        style: { backgroundColor: "#def4ef" }
                       };
                       return (
                         <form onSubmit={handleSubmit}>
@@ -76,6 +67,7 @@ const RegisterProvider = () => {
                                 </Container>
                               </div>
                             </Row>
+                            
                             <Row>
                               <div className={"loginItem"}>
 

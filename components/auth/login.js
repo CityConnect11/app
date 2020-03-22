@@ -32,7 +32,7 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
                         type: "button",
                         role: "submit",
                         value: "Anmelden",
-                        style: { backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }
+                        style: { backgroundColor: modeValue === 'business' ? "#def4ef" : "#ffcfc5" }
                       };
                       return (
                         <form onSubmit={handleSubmit}>
@@ -99,7 +99,7 @@ const LoginDialog = ({ isPrivate, modeValue, setRegistration }) => {
                 <Row>
                   <div className={"loginItem"}>
                     <Button
-                      style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}
+                      style={{ backgroundColor: modeValue === 'business' ? "#def4ef" : "#ffcfc5" }}
                       href={isPrivate ? '/consumer' : "#"} onClick={() => setRegistration(true)}>
                       {registerTitle}
                     </Button>

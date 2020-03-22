@@ -7,19 +7,21 @@ const Videos = () => {
     <div>
       <Container>
         <Row>
-          <Col xs={6} style={{ padding: "10px" }}>
-            <img src={require("../../public/static/video1.jpg")} />
+          <Col xs={4} style={{ padding: "10px" }} />
+          <Col xs={4} style={{ padding: "10px" }}>
+            <img src={require("../../public/static/video1.png")} />
           </Col>
-          <Col xs={6} style={{ padding: "10px" }}>
-            <img src={require("../../public/static/video2.jpg")} />
+          <Col xs={4} style={{ padding: "10px" }}>
+            <img src={require("../../public/static/video2.png")} />
           </Col>
         </Row>
         <Row>
-          <Col xs={6} style={{ padding: "10px" }}>
-            <img src={require("../../public/static/video3.jpg")} />
+          <Col xs={4} style={{ padding: "10px" }} />
+          <Col xs={4} style={{ padding: "10px" }}>
+            <img src={require("../../public/static/video3.png")} />
           </Col>
-          <Col xs={6} style={{ padding: "10px" }}>
-            <img src={require("../../public/static/video4.jpg")} />
+          <Col xs={4} style={{ padding: "10px" }}>
+            <img src={require("../../public/static/video4.png")} />
           </Col>
         </Row>
       </Container>

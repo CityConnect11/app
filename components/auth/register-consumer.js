@@ -25,7 +25,7 @@ const RegisterConsumer = () => {
                         type: "button",
                         role: "submit",
                         value: "Jetzt Konto erstellen",
-                        style: { backgroundColor: "#b7d0cd" }
+                        style: { backgroundColor: "#ffcfc5" }
                       };
                       return (
                         <form onSubmit={handleSubmit}>

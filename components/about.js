@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import { useState } from 'react'
 import { connect, useSelector } from 'react-redux'
 import About from './about/about'
-import Main from './start/main'
+import Team from './about/team'
 import Header from './header/header'
 import { MODE_PRIVATE } from '../lib/constants'
 
@@ -20,8 +20,8 @@ const AboutIndex = () => {
             <About modeValue={modeValue} />
           </Col>
           <Col xs={8} className={"main"} 
-            style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}>
-            <Main modeValue={modeValue} />
+            style={{ backgroundColor: "#000000" }}>
+            <Team />
           </Col>
         </Row>
       </Container>

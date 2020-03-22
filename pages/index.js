@@ -1,6 +1,10 @@
+import dynamic from 'next/dynamic'
 import React from 'react'
 import Frame from '../components/frame';
-import StartMenu from '../components/start';
+
+const StartMenu = dynamic(() => import('../components/start'), {
+  ssr: false
+})
 
 export default () => {
   return (

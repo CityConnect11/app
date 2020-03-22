@@ -1,10 +1,9 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from '@material-ui/core/Button'
 import { Form } from 'react-final-form'
 
-const About = ({ modeValue }) => {
+const About = () => {
   return (
     <div>
       <Container>
@@ -20,13 +19,6 @@ const About = ({ modeValue }) => {
                   <Form
                     onSubmit={() => { }}
                     render={({ handleSubmit, form, submitting, pristine, values }) => {
-                      const submitProps = {
-                        disabled: pristine,
-                        type: "button",
-                        role: "submit",
-                        value: "Anleitung starten",
-                        style: { backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }
-                      };
                       return (
                         <form onSubmit={handleSubmit}>
                           <Container>
@@ -34,10 +26,13 @@ const About = ({ modeValue }) => {
                               <div className={"loginItem"}>
                                 <ul>
                                   <li>
-                                    <a href={"https://devpost.com/software/1_025_e-kulturangebote_virtuelles_pizzaessen/joins/efgYrpDPat9KtdTGlhq6Ow"}>DevPost</a>
+                                    <a href={"https://devpost.com/software/1_025_e-kulturangebote_virtuelles_pizzaessen/"}>DevPost</a>
                                   </li>
                                   <li>
                                     <a href={"https://www.youtube.com/watch?v=tL5KLSRlEfc"}>Video</a>
+                                  </li>
+                                  <li>
+                                    <a href={"https://twitter.com/cityconnect11"}>Twitter</a>
                                   </li>
                                 </ul>
                               </div>

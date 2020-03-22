@@ -25,7 +25,7 @@ const Help = ({ modeValue }) => {
                         type: "button",
                         role: "submit",
                         value: "Anleitung starten",
-                        style: { backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }
+                        style: { backgroundColor: modeValue === 'business' ? "#def4ef" : "#ffcfc5" }
                       };
                       return (
                         <form onSubmit={handleSubmit}>

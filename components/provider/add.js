@@ -15,7 +15,7 @@ const ProviderMap = () => {
             <RegisterBusiness />
           </Col>
           <Col xs={8} className={"main"} 
-            style={{ backgroundColor: "#ecb3b5" }}>
+            style={{ backgroundColor: "#def4ef" }}>
             <MapObject />
           </Col>
         </Row>

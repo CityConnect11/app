@@ -15,7 +15,7 @@ const ConsumerMap = () => {
             <FacetSearch />
           </Col>
           <Col xs={8} className={"main"} 
-            style={{ backgroundColor: "#b7d0cd" }}>
+            style={{ backgroundColor: "#ffcfc5" }}>
             <MapObject />
           </Col>
         </Row>

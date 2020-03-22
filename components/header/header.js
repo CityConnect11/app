@@ -16,7 +16,7 @@ export default ({modeValue, setModeValue}) => (
             </Row>
             <Row>
               <Col xs={12}>
-                <div className="description">
+                <div className="description" style={{textAlign: "center"}}>
                    Socializing in Zeiten von #physicaldistancing
                 </div>
               </Col>
@@ -24,7 +24,7 @@ export default ({modeValue, setModeValue}) => (
           </Container>
         </Col>
         <Col xs={8} className={"main"}
-          style={{ backgroundColor: modeValue === 'business' ? "#ecb3b5" : "#b7d0cd" }}>
+          style={{ backgroundColor: modeValue === 'business' ? "#def4ef" : "#ffcfc5" }}>
           <Container>
             <Row>
               <Col xs={"3"}/>

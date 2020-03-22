@@ -11,7 +11,7 @@ const ModeSelection = ({modeValue, setModeValue}) => {
     <Container>
         <Row>
           <Col xs={4}>
-            <div>privat</div>
+            <div>Privat</div>
           </Col>
           <Col xs={3}>
           <div style={{ paddingTop: "5px", paddingRight: "0px"}}>
@@ -28,7 +28,7 @@ const ModeSelection = ({modeValue, setModeValue}) => {
             </div>
           </Col>
           <Col xs={5}>
-            <div  style={{ paddingRight: "20px"}}>geschäftlich</div>
+            <div  style={{ paddingRight: "20px"}}>Geschäft</div>
           </Col>
         </Row>
       </Container>
