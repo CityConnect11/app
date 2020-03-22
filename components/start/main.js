@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Help from "./help"
 import Sofa from "../icons/sofa"
 
-const Main = () => {
+const Main = ({ modeValue, setModeValue }) => {
   return (
     <div>
       <Container>

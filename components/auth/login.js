@@ -3,14 +3,10 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import { Form, Field } from 'react-final-form'
-import { connect, useSelector } from 'react-redux'
 import { MODE_PRIVATE } from '../../lib/constants'
-import { useState } from 'react'
 
-const Login = () => {
-  const modeFromSelector = useSelector(state => state.mode ? state.mode : MODE_PRIVATE.key)
-  const [mode] = useState(modeFromSelector);
-  const isPrivate = mode === MODE_PRIVATE.key;
+const Login = ({ modeValue }) => {
+  const isPrivate = modeValue === MODE_PRIVATE.key;
   const loginTitle = isPrivate ? "Anmelden" : "Geschäftslogin";
   const registerTitle = isPrivate ? "Als Gast beitreten" : "Geschäft registrieren";
   return (
@@ -21,7 +17,7 @@ const Login = () => {
           <Col xs={8}>
             <Container>
               <Row>
-                <div className={"loginTitle"}>{loginTitle}</div>
+                <div className={"loginTitle"}>{loginTitle} - {modeValue}</div>
               </Row>
               <Row>
                 <Form
@@ -104,4 +100,4 @@ const Login = () => {
   )
 }
 
-export default connect()(Login);
+export default Login;

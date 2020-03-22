@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'IBM Plex Mono Regular, sans-serif';
 }
 
 .at-bottom {
@@ -23,9 +24,9 @@ html, body {
   width: 220px;
   text-align: center;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Mono Regular, sans-serif';
   color: #434343;
-  border: 1px solid #9b9b9b;
+  border: 3px solid #9b9b9b;
 }
 
 .modeSlider {
@@ -33,10 +34,10 @@ html, body {
   width: 250px;
   text-align: center;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Mono Regular, sans-serif';
   background-color: #ffffff;
   color: #434343;
-  border: 1px solid #9b9b9b;
+  border: 3px solid #9b9b9b;
 }
 
 .card:hover {
@@ -72,6 +73,7 @@ html, body {
 
 .label {
   font-weight: bold;
+  font-family: 'IBM Plex Mono Regular';
 }
 
 @keyframes Loading {

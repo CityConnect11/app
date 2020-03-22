@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Navbar from './navbar'
 
-export default () => (
+export default ({modeValue, setModeValue}) => (
   <div style={{width: "100%"}}>
     <Container className="frame">
       <Row>
@@ -24,9 +24,9 @@ export default () => (
         <Col xs={8} className={"main"}>
           <Container>
             <Row>
-              <Col xs={"6"}/>
-              <Col xs={"6"}>
-                <Navbar />
+              <Col xs={"3"}/>
+              <Col xs={"9"}>
+                <Navbar modeValue={modeValue} setModeValue={setModeValue} />
               </Col>
             </Row>
           </Container>

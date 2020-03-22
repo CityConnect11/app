@@ -2,16 +2,10 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Slider from 'rc-slider';
-import { connect, useSelector, useDispatch } from 'react-redux'
-import { useState } from 'react'
-import { setMode } from '../../lib/actions'
-import { MODE_PRIVATE, resolveModeByKey } from '../../lib/constants'
+import { resolveModeByKey, resolveModeByValue } from '../../lib/constants'
 
-const ModeSelection = () => {
-  const initialModeValue = useSelector(state => state.mode ? resolveModeByKey(state.mode).value : MODE_PRIVATE.value)
-  const [modeValue, setModeValue] = useState(initialModeValue)
+const ModeSelection = ({modeValue, setModeValue}) => {
 
-  const dispatch = useDispatch();  
   return (
     <div className="modeSlider">
     <Container>
@@ -24,12 +18,11 @@ const ModeSelection = () => {
             <Slider 
               min={0} max={1} 
               included={false} 
-              value={modeValue}
+              value={resolveModeByKey(modeValue).value}
               defaultValue={0} 
               step={1} 
               onChange={event => {
-                setModeValue(event)
-                dispatch(setMode(event))
+                setModeValue(resolveModeByValue(event).key)
               }}
             />
             </div>
@@ -43,4 +36,4 @@ const ModeSelection = () => {
   )
 }
 
-export default connect()(ModeSelection)
+export default ModeSelection;

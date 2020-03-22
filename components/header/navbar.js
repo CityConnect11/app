@@ -6,7 +6,7 @@ import Button from '../menu/button'
 import Entry from '../menu/entry'
 import ModeSelection from './mode'
 
-const Navbar = () => {
+const Navbar = ({modeValue, setModeValue}) => {
   return (
     <div>
       <Container>
@@ -19,7 +19,9 @@ const Navbar = () => {
           </Col>
           <Col xs={6}>
             <Entry>
-              <ModeSelection />
+              <div width={"1000%"}>
+                <ModeSelection modeValue={modeValue} setModeValue={setModeValue} />
+              </div>
             </Entry>
           </Col>
         </Row>
