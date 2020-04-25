@@ -5,15 +5,24 @@ import {
 } from "react-openlayers";
 
 const ConsumerMap = () => {
-  var map = new Map({
-    view: new View({
-      center: [0, 0],
-      zoom: 2
-    })
-  });
-  map.setTarget("map");
+  const showPopup = () => null;
   return (
-    <div id="map"></div>
+    <>
+      <Map view={{ center: [0, 0], zoom: 2 }} onClick={showPopup}>
+        <Layers>
+          <layer.Tile />
+        </Layers>
+        <Controls attribution={false} zoom={true}>
+          <control.Rotate />
+          <control.ScaleLine />
+          <control.FullScreen />
+          <control.OverviewMap />
+          <control.ZoomSlider />
+          <control.ZoomToExtent />
+          <control.Zoom />
+        </Controls>
+      </Map>
+    </>
   );
 }
 export default ConsumerMap;
