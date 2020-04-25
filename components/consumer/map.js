@@ -1,9 +1,13 @@
+import dynamic from 'next/dynamic'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import MapObject from '../map/map'
 import FacetSearch from './facet-search'
 import Header from '../header/header'
+
+const MapObject = dynamic(() => import('../map/map'), {
+  ssr: false
+});
 
 const ConsumerMap = () => {
   return (

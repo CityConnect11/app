@@ -117,7 +117,7 @@ html, body {
 }
 
 .title, .loginTitle {
-  font-family: 'IBM Plex Mono Regular';
+  font-family: 'IBM Plex Mono Regular', monospace;
   text-align: center;
 }
 
